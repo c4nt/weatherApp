@@ -1,0 +1,29 @@
+.details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+
+    
+    .umidity {
+        border-right: 1px solid #fff ;
+        margin: 0.6rem;
+        padding: 0.6rem;
+        
+        span {
+            margin: 0.5em;
+
+        }
+
+    }
+
+    .wind {
+           
+        span {
+            margin: 0.5em;
+
+        }
+    }
+
+}

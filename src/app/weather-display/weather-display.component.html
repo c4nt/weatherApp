@@ -1,0 +1,18 @@
+<div class="weather-display">
+
+    <div class="weather-data">
+        <h2>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>{{ cityName }}</span>
+            <img [src]="countryIcon" alt="Country">
+        </h2>
+        <p><span>{{ cityTemp }}</span>&deg;C</p>
+    </div>
+    
+    <div class="descripition">
+        <p><span>{{ cityWeather }}</span></p>
+        <img [src]="weatherIcon" width="50px" height="50px"  alt="weather condition">
+    </div>
+
+</div>
+

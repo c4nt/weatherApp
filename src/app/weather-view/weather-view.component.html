@@ -1,0 +1,50 @@
+
+<div class="container">
+
+    <div class="form">
+        
+        <h3>Check the city weather:</h3>
+        
+        <div class="form-input-container" >
+
+            <input type="text" 
+                id="formInput"
+                placeholder="Digite o nome da cidade" 
+                [formControl]="cityInputControl"
+                (keydown.enter)=" getWeahterData() ; getBgPhotos() ">
+
+            <button type="submit" id="search" (click)=" getWeahterData() ; getBgPhotos()"> 
+                <i class="fa-solid fa-magnifying-glass"></i> 
+            </button>
+                
+
+        </div>
+
+        <div class="loadIcon" *ngIf="loadFlag == 1">
+
+        </div>
+
+        <div class="erroHandling" *ngIf="hideFlag == 1">
+            <p>This city does not exist. Please, submit another city name.</p>
+        </div>
+
+    </div>
+
+    <app-weather-display 
+    
+        *ngIf="hideFlag == 0" 
+        [apiResponse]="response">
+
+    </app-weather-display>
+    
+    <app-weather-details 
+
+        *ngIf="hideFlag == 0"
+        [apiResponse]="response">
+
+    </app-weather-details>
+
+</div>
+
+
+
